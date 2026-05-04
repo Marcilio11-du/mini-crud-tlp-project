@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Simples - Tarefa de TLP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <h1>CRUD Simples - Gerenciamento de Utilizadores</h1>
+
+        <section class="crud-form">
+            <form id="addUserForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="birthDate">Data de Nascimento:</label>
+                <input type="date" id="birthDate" name="birthDate" required>
+
+                <button type="submit">Adicionar Utilizador <span>+</span></button>
+            </form>
+        </section>
+        
+        <section class="crud-result">
+            <h2>Lista de Utilizadores</h2>
+            <table id="usersTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Data de Nascimento</th>
+                        <th>Criado em</th>
+                        <th>Atualizado em</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Os dados dos utilizadores serão inseridos aqui dinamicamente -->
+                </tbody>
+            </table>
+
+            <!-- Modal para edição de utilizadores -->
+            <dialog id="editUserModal">
+                <div class="modal-content">
+                    <h2>Editar Utilizador</h2>
+                    <form id="editForm">
+                        <label for="editName">Nome:</label>
+                        <input type="text" id="editName" name="editName" required>
+
+                        <label for="editEmail">Email:</label>
+                        <input type="email" id="editEmail" name="editEmail" required>
+
+                        <label for="editPassword">Password:</label>
+                        <input type="password" id="editPassword" name="editPassword" required>
+
+                        <label for="editBirthDate">Data de Nascimento:</label>
+                        <input type="date" id="editBirthDate" name="editBirthDate" required>
+
+                        <div class="modal-buttons">
+                            <button type="submit" class="save-btn">Salvar Alterações</button>
+                            <button type="button" class="cancel-btn">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </dialog>
+
+        </section>
+    </main>
+
+    <script src="script.js">
+       
+    </script>
+    
+</body>
+</html>
